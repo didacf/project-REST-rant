@@ -38,3 +38,8 @@ main {
   margin-left: 20px;
   background-color: white;
 }
+
+img {
+  width: 250px;
+  height: 250px;
+}
