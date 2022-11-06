@@ -1,6 +1,7 @@
 const React = require('react')
 const Def = require('../default')
 
+
 function new_form () {
     return (
         <Def>
@@ -33,6 +34,7 @@ function new_form () {
         </Def>
     )
 }
+
 
 module.exports = new_form
 
