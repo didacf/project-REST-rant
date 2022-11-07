@@ -7,13 +7,13 @@ router.get('/', (req, res) => {
         city: 'Seattle',
         state: 'WA',
         cuisines: 'Thai, Pan-Asian',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/thai-tables-restrant.jpg'
       }, {
         name: 'Coding Cat Cafe',
         city: 'Phoenix',
         state: 'AZ',
         cuisines: 'Coffee, Bakery',
-        pic: 'http://placekitten.com/250/250'
+        pic: '/images/coffee.jpg'
       }]
       
       res.render('places/index', { places })   
@@ -53,7 +53,7 @@ router.get('/:id', (req, res) => {
         // Dig into req.body and make sure data is valid
         if (!req.body.pic) {
             // Default image if one is not provided
-            req.body.pic = 'http://placekitten.com/400/400'
+            req.body.pic = '/images/404-error-page-not-found.jpg'
         }
         if (!req.body.city) {
             req.body.city = 'Anytown'
