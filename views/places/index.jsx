@@ -21,14 +21,16 @@ function index (data) {
         )
       })  
     return (
-      <Def>
-          <main>
-              <h1>PLACES INDEX PAGE</h1>
+        <Def>
+        <main>
+            <h1>Places to Rant or Rave About</h1>
+            <div className='row'>
               {placesFormatted}
-          </main>
-      </Def>
-  )
-  }
+            </div>
+        </main>
+    </Def>
+)
+}
   
 
 module.exports = index
