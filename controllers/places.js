@@ -1,5 +1,3 @@
-
-
 const router = require('express').Router()
 const db = require('../models')
 
@@ -15,6 +13,11 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  if (!req.body.pic) {
+    // Default image if one is not provided
+    req.body.pic = '/images/salad.jpg'
+  }
+
   db.Place.create(req.body)
   .then(() => {
       res.redirect('/places')
@@ -24,6 +27,7 @@ router.post('/', (req, res) => {
       res.render('error404')
   })
 })
+
 
 router.get('/new', (req, res) => {
   res.render('places/new')
