@@ -1,21 +1,20 @@
 const db = require('../models')
 
-db.Place.create([{
+const seedPlace = db.Place.create([{
     name: 'H-Thai-ML',
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: '/images/thai-tables-restrant.jpg',
+    pic: '../images/pancakes.jpg',
     founded: 1989
 }, {
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
-    pic: '/images/coffee.jpg',
+    pic: '../images/ramen.jpg',
     founded: 2020
 }])
-
 .then(() => {
     console.log('Success!')
     process.exit()
@@ -24,3 +23,5 @@ db.Place.create([{
     console.log('Failure!', err)
     process.exit()
 })
+
+module.exports = seedPlace

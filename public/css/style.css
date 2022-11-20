@@ -43,3 +43,13 @@ img {
   width: 500px;
   height: 500px;
 }
+
+nav a:hover {
+  color: pink;
+  text-decoration: none;
+}
+
+.bor{
+  border: 1px;
+  color: red;
+}
